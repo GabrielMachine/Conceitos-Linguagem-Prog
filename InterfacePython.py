@@ -1,8 +1,7 @@
-
 #biblioteca tk
 from tkinter import *
 
-#função 
+#função
 def botao_click():
 
     #teste para o click na cmd
@@ -15,13 +14,13 @@ def botao_click():
     dado6["text"] = dado2.get()
     dado7["text"] = dado3.get()
     dado8["text"] = dado4.get()
-    
+
     #somar os dados
     soma = float(dado1.get())+float(dado2.get())+float(dado3.get())+float(dado4.get())
     #resultado
     texto1["text"] = soma
 
-    
+
 def botao_click1():
 
     #gabriel
@@ -33,7 +32,7 @@ def botao_click1():
     #-------------------------------------------------------------------------------------
 
 def botao_click2():
-    
+
     #pega os dados
     x = dado1.get()
     y = dado2.get()
@@ -47,19 +46,19 @@ def botao_click2():
     inp="função("+dado1.get()+","+dado2.get()+","+dado3.get()+","+dado4.get()+")"+"="+dado9.get()
     #pega o indice guardado na label
     soma =int(lb4["text"])
-    #guarda função na memória 
+    #guarda função na memória
     vet.append(inp)
-    #atribui um novo valor ao campo texto com o indice +1 para saber o tamanho do vetor adquirido 
+    #atribui um novo valor ao campo texto com o indice +1 para saber o tamanho do vetor adquirido
     lb4["text"] = str(soma + 1)
-    
-    
-    
-    
+
+
+
+
 
 #cria o objeto janela e suas configurações
 janela = Tk()
 janela.title("Interface")
- 
+
 janela.geometry("800x400+100+100")
                   #L X A + E + T
 
@@ -67,39 +66,44 @@ janela.geometry("800x400+100+100")
 titulo = Label(janela , text = "projeto interface").pack()
 
 
-#criando os espaçamentos para a colocação dos dados acima 
-texto0 = Label(janela , text = "função (")
+#criando os espaçamentos para a colocação dos dados acima
+texto0 = Label(janela , text = "função:")
 texto0.place(x=25, y=50)
-
+##############required by professor:#####################
+nomefun = Entry(janela)
+nomefun.place(x=70, y=50)
+nomefun = Label(janela , text = "(")
+nomefun.place(x=200, y=50)
+##############################
 dado1 = Entry(janela)
-dado1.place(x=78 , y=50)
+dado1.place(x=215 , y=50)
 
 texto1 = Label(janela , text = ",")
-texto1.place(x=205, y=50)
+texto1.place(x=345, y=50)
 
 dado2 = Entry(janela)
-dado2.place(x=218 , y=50)
+dado2.place(x=355 , y=50)
 
 texto2 = Label(janela , text = ",")
-texto2.place(x=345, y=50)
+texto2.place(x=480, y=50)
 
 dado3 = Entry(janela)
-dado3.place(x=358 , y=50)
+dado3.place(x=490 , y=50)
 
 texto3 = Label(janela , text = ",")
-texto3.place(x=485, y=50)
+texto3.place(x=610, y=50)
 
 dado4 = Entry(janela)
-dado4.place(x=500 , y=50)
+dado4.place(x=620, y=50)
 
 texto4 = Label(janela , text = ")")
-texto4.place(x=627, y=50)
+texto4.place(x=740, y=50)
 
 texto9 = Label(janela , text = "=")
-texto9.place(x=635, y=50)
+texto9.place(x=750, y=50)
 
 dado9 = Entry(janela)
-dado9.place(x=653 , y=50)
+dado9.place(x=765 , y=50)
 
 #gabriel
 #------------------------------------------------------
@@ -110,33 +114,39 @@ out.place(x=75 , y=100)
 #------------------------------------------------------
 
 
-#criando os espaçamentos para a alocação dos dados abaixo 
-texto0 = Label(janela , text = "função (")
+#criando os espaçamentos para a alocação dos dados abaixo
+texto0 = Label(janela , text = "função ")
 texto0.place(x=25, y=350)
+########################changing ##############
 
+nomefun = Entry(janela)
+nomefun.place(x=70, y=350)
+txt = Label(janela , text = "(")
+txt.place(x=200, y=350)
+#####################################
 dado5 = Label(janela , text = "0")
-dado5.place(x=80 , y=350)
+dado5.place(x=210 , y=350)
 
 texto5 = Label(janela , text = ",")
-texto5.place(x=110, y=350)
+texto5.place(x=220, y=350)
 
 dado6 = Label(janela , text = "0")
-dado6.place(x=120 , y=350)
+dado6.place(x=230 , y=350)
 
 texto6 = Label(janela , text = ",")
-texto6.place(x=150, y=350)
+texto6.place(x=240, y=350)
 
 dado7 = Label(janela , text = "0")
-dado7.place(x=160 , y=350)
+dado7.place(x=250 , y=350)
 
 texto7 = Label(janela , text = ",")
-texto7.place(x=190, y=350)
+texto7.place(x=260, y=350)
 
 dado8 = Label(janela , text = "0")
-dado8.place(x=200 , y=350)
+dado8.place(x=270 , y=350)
 
 texto8 = Label(janela , text = ")")
-texto8.place(x=230, y=350)
+texto8.place(x=280, y=350)
 
 # mostrando o resultado
 texto11 = Label(janela , text = "Resultado")
